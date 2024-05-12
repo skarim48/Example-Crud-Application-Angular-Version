@@ -1,0 +1,1 @@
+C:\Users\skarim\Desktop\Samir SQLI\Projects\CRUD App core + Angular\AngularProject\obj\Debug\AngularProject.esproj.CoreCompileInputs.cache

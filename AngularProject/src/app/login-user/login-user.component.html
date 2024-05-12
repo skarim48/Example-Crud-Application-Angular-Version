@@ -1,0 +1,21 @@
+<h1>Login User</h1>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <input type="text" id="UserName" formControlName="UserName" placeholder="{{jsonData?.Username}}">
+    <!--<div *ngIf="myForm.get('UserName')?.invalid && myForm.get('UserName')?.touched">
+      <span *ngIf="myForm.get('UserName')?.errors?.required">UserName is required.</span>
+    </div>-->
+  </div>
+
+  <div>
+    <input type="password" id="Password" formControlName="Password" placeholder="{{jsonData?.Password}}">
+    <!--<div *ngIf="myForm.get('Password')?.invalid && myForm.get('Password')?.touched">
+      <span *ngIf="myForm.get('Password')?.errors?.required">Password is required.</span>
+    </div>-->
+  </div>
+
+  <!--<button type="submit" [disabled]="myForm.invalid">{{jsonData?.Signin}}</button>-->
+  <button type="submit" [disabled]="myForm.invalid">&#10132;</button>
+
+</form>

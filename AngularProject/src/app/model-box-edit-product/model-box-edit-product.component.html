@@ -1,0 +1,12 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span onclick="document.getElementById('myModal').style.display = 'none'" class="close">&times;</span>
+    <h1>Edit Product</h1>
+    <form *ngIf="getProductParent" (ngSubmit)="editProductSubmit()">
+      <input type="text" [(ngModel)]="getProductParent.name" name="name" />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>

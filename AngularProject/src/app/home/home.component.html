@@ -1,0 +1,23 @@
+<style>
+  table {
+    width: 100%
+  }
+</style>
+<table border="0">
+  <tr>
+    <td style="background-color:ghostwhite"><app-create-user *ngIf="this.isTokenExpired"></app-create-user></td>
+    <td style="background-color:cornsilk"><app-login-user *ngIf="this.isTokenExpired"></app-login-user></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td style="background-color:ghostwhite"><app-create-product *ngIf="!this.isTokenExpired"></app-create-product></td>
+    <td style="background-color:cornsilk"><app-list-product *ngIf="!this.isTokenExpired"></app-list-product></td>
+  </tr>
+</table>
+<hr />
+<button class="nav-link text-dark" (click)="SignOut()" *ngIf="!this.isTokenExpired">LogOut</button>
+
+
+
+

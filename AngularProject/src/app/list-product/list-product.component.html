@@ -1,0 +1,11 @@
+<h1>List Products ({{products.length}})</h1>
+<div *ngIf="products && products.length">
+  <table *ngFor="let product of products">
+    <tr>
+      <td>Product is : {{ product.name }}</td>
+      <td><button (click)="DeleteProduct(product)">Delete</button></td>
+      <td><button (click)="OpenModelProduct(product)">Edit</button></td>
+    </tr>
+  </table>
+</div>
+<app-model-box-edit-product *ngIf="showModal" [getProductParent]="data"></app-model-box-edit-product>
