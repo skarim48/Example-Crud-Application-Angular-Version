@@ -42,7 +42,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 //
 builder.Services.AddControllers();
-builder.Services.AddTransient<ApiProject.LoggingMiddleware>();
 builder.Services.AddAuthorization(config =>
 {
     //config.AddPolicy(JWTPolicies.Admin, JWTPolicies.AdminPolicy());
@@ -50,7 +49,6 @@ builder.Services.AddAuthorization(config =>
 });
 
 var app = builder.Build();
-app.UseMiddleware<LoggingMiddleware>();
 app.UseCors(builder => builder
     .AllowAnyOrigin()
     .AllowAnyMethod()
